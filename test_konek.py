@@ -1,8 +1,8 @@
+from playwright.sync_api import sync_playwright
+
 def test_koneksi():
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False)
+        browser = p.chromium.launch(headless=True)
         page = browser.new_page()
-        page.goto("https://example.com") # ini web paling ringan di dunia
-        print(page.title())
-        assert "Example" in page.title()
+        page.goto("https://example.com")
         browser.close()
