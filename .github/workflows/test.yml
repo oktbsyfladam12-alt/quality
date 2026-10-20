@@ -1,4 +1,3 @@
-@"
 name: Robot Saucedemo
 on: [push]
 jobs:
@@ -11,9 +10,3 @@ jobs:
           python-version: '3.11'
       - run: pip install pytest playwright && playwright install --with-deps chromium
       - run: pytest -v
-"@ | Set-Content .github\workflows\test.yml
-
-git add .github\workflows\test.yml
-git rm --cached test_level_dewa.py
-git commit -m "hapus file kosong dan benerin robot"
-git push
