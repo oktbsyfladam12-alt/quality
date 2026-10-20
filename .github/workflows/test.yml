@@ -9,4 +9,4 @@ jobs:
         with:
           python-version: '3.11'
       - run: pip install pytest playwright && playwright install --with-deps chromium
-      - run: pytest test_level_dewa.py -v
+      - run: pytest -v
